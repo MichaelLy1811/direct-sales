@@ -1,21 +1,847 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="header bg-white">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="col">
+            <p class="panel-logo">
+              <a href="#" title="DXC Company"></a>
+            </p>
+            <p class="panel-product-title">Regular Unit Link</p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
+            <select class="form-control select-language" aria-invalid="false">
+              <option value="en" selected="selected">English</option>
+              <option value="vi">Vietnamese</option>
+            </select>
+          </div>
+        </nav>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<body>
+  <header>
+    <div class="row" style="margin: 110px 0;">
+      <div class="col-xs-9 col-md-9">
+        <nav class="nav nav-justified">
+          <a id="quotationStage" class="nav-item nav-link active">
+            <div class="fa fa-2x fa-calculator"></div>
+            <div>Quotation</div>
+            <div class="circle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+          </a>
+
+          <a id="applicationStage" class="nav-item nav-link">
+            <div class="fa fa-2x fa-list-alt"></div>
+            <div>Application</div>
+          </a>
+
+          <a id="paymentStage" class="nav-item nav-link">
+            <div class="fa fa-2x fa-credit-card"></div>
+            <div>Payment</div>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+          <!--PROPOSER UI-view-->
+          <div class="card border-info">
+            <div class="card-header">Proposer</div>
+            <div class="card-body text-dark">
+
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <label class="col-md-12 col-form-label">
+                    First Name
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <input id="poFirstName" class="form-control" type="text" maxlength="40" aria-invalid="true" required="required">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <label class="col-md-12 col-form-label">
+                    Last Name
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <input id="poLastName" class="form-control" type="text" maxlength="40" aria-invalid="true" required="required">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <label class="col-md-12 col-form-label">
+                      Date of Birth
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <input name="poDateOfBirth" bsDatepicker [bsConfig]="{ containerClass: 'theme-default' }" class="form-control datepicker" type="text" autocomplete="off" placeholder="MM/DD/YYYY">
+                    <i id="P1728750205" class="far fa-calendar-alt fa-2x" aria-hidden="true" aria-haspopup="true"
+                        aria-expanded="true" aria-readonly="false"></i>                 
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <label class="col-md-12 col-form-label">
+                    Age Nearest Birthday
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <input type="text" id="poAge" class="form-control" aria-invalid="false" disabled="disabled">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <label class="col-sm-12 col-form-label">
+                    Gender
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12 form-check">
+                    <style>
+                      .v3-switch-indicator-bar-default{
+                        width:50px;
+                        height:30px;
+                        -webkit-transform:translate3d(-150%,0,0);
+                        transition:.1s linear all;
+                        background:0 0;
+                        z-index:0
+                      }
+                      .v3-switch-indicator-bar{
+                        width:50px;
+                        -webkit-transform:translate3d(-188%,0,0)
+                      }
+                      .v3-switch-selected{
+                        width:50px;
+                        -webkit-transform:translate3d(-90%,0,0)
+                      }
+                      .v3-switch-selected-disabled{
+                        color:#bebebe!important
+                      }
+                      .v3-switch-option-item-left{
+                        height:28px;
+                        line-height:28px;
+                        z-index:1;
+                        margin:0 auto;
+                        text-align:center;
+                        border-top-left-radius:0;
+                        border-bottom-left-radius:0;
+                        -webkit-transform:translate3d(0,0,0)
+                      }
+                      .v3-switch-option-item-right{
+                        height:28px;
+                        line-height:28px;
+                        z-index:1;
+                        margin:0 auto;
+                        text-align:center;
+                        border-top-right-radius:0;
+                        border-bottom-right-radius:0;
+                        -webkit-transform:translate3d(0,0,0)
+                      }
+                      .v3-switch-indicator{
+                        cursor:pointer;
+                        margin-top:-7px;
+                        width:181px;
+                        color:#555!important;
+                        float:left;
+                        border-radius:2px;
+                        height:30px;
+                        font-size:13px
+                      }
+                      .v3-switch-item-selected{
+                        color:#fff;
+                        background-color:#fe0
+                      }
+                      .v3-switch-item{
+                        color:#555;
+                        background-color:#fff
+                      }
+                      .v3-switch-item-disabled{
+                        background-color:#fff
+                      }
+                      .v3-switch{
+                        margin-top:0;
+                        border-radius:2px;
+                        height:52px;
+                        font-size:16px;
+                        float:none
+                      }
+                      .v3-switch-new{
+                        color:#303131;
+                        background-color:#fff
+                      }
+                      .v3-switch-new-left{
+                        color:#303131;
+                        background-color:#fff;
+                        float:left
+                      }
+                      .v3-switch-item-new{
+                        cursor:pointer;
+                        color:#555;
+                        background-color:transparent;
+                        text-align:center;
+                        height:52px;
+                        line-height:52px;
+                        min-width:65px
+                      }
+                      .v3-switch-new-disabled{
+                        color:#bebebe
+                      }
+                      .v3-select-separator-new{
+                        width:1px;
+                        height:28px;
+                        background:#4caf50;
+                        position:relative
+                      }
+                      div.v3-switch-item-selected-new,div.v3-switch-item-selected-new:hover{
+                        background-color:#fe0;
+                        border:1px solid #fe0;
+                        color:#000!important;
+                        -webkit-transition:.6s ease-in-out;
+                        -moz-transition:.6s ease-in-out;
+                        transition:.6s ease-in-out
+                      }
+                      div.v3-switch-item-selected-disabled{
+                        background-color:#fe0;
+                        color:#000!important;
+                        -webkit-transition:.6s ease-in-out;
+                        -moz-transition:.6s ease-in-out;
+                        transition:.6s ease-in-out
+                      }
+                      .v3-switch-slider{
+                        height:42px;
+                        position:absolute;
+                        z-index:2
+                      }
+                      .v3-switch-last{
+                        color:#303131;
+                        background-color:#f0f0f0;
+                        border-color:#f0f0f0
+                      }
+                      .v3-switch-button-ontop{
+                        position:relative;
+                        z-index:10;
+                        display:block!important;
+                        opacity:1!important
+                      }
+                      .v3-switch-button-hide{
+                        opacity:0
+                      }
+                      .v3-switch-button-disable{
+                        background-color:#eee!important
+                      }
+                      .v3-switch-masked{
+                        top:0;
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        position:fixed;
+                        z-index:1
+                      }
+                      .v3-switch-icon{
+                        top:2px;
+                        position:absolute;
+                        float:right;
+                        right:10px;
+                        color:#303131
+                      }
+                      .v3-switch-animation-right{
+                        -webkit-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                        -moz-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                        -o-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                        transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                        position:relative;
+                        right:-1000px;
+                        float:right;
+                        opacity:0;
+                        width:0
+                      }
+                      .v3-switch-animation-right-active{
+                        top:0;
+                        position:relative;
+                        right:0;opacity:1;
+                        z-index:500;
+                        width:100%
+                      }
+                      .v3-switch-container-right{
+                        float:right;
+                        overflow-x:hidden;
+                        top:0;
+                        position:absolute;
+                        right:0
+                      }
+                      .v3-switch-animation-left{
+                        -webkit-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                        -moz-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                        -o-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                        transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                        position:relative;
+                        left:-1000px;
+                        float:left;
+                        z-index:-1;
+                        width:0
+                      }
+                      .v3-switch-animation-left-active{
+                        position:relative;
+                        left:0;
+                        opacity:1;
+                        z-index:500;
+                        width:100%
+                      }
+                      .v3-switch-container-left{
+                        float:left;
+                        overflow-x:hidden;
+                        top:0;
+                        position:absolute
+                      }
+                      .v3-switch-item-sep-disabled,.v3-switch-last-disabled{
+                        color:#000;
+                        background-color:#ccc;
+                        cursor:default
+                      }
+                      .v3-switch-item-selected-disabled .v3-switch-item-new,.v3-switch-item-sep-disabled .v3-switch-item-new,.v3-switch-last-disabled .v3-switch-item-new{
+                        cursor:default!important
+                      }
+                      .v3-switch-last:hover,.v3-switch-slider-item-sep:hover{
+                        background-color:#f2e100
+                      }
+                      .v3-switch-item-sep{
+                        color:#555
+                      }
+                      .v3-switch-slider-item-sep{
+                        background-color:#f0f0f0;
+                        border-color:#f0f0f0;
+                        color:#303131
+                      }
+                    </style>                   
+                    <div layout="row" id="switch-59ueq" class="v3-switch v3-switch-new layout-row">
+                      <div id="switch-59ueq-0" class="v3-switch-slider-item-sep v3-switch-item-selected-new">
+                        <div layout="row" class="v3-switch-item-new layout-row flex" flex=""> 
+                          <div flex="" title="Male" class="waves-effect waves-teal ng-binding flex" role="button" tabindex="0"> 
+                            Male 
+                          </div> 
+                        </div> 
+                      </div>
+                      <div id="switch-59ueq-1" class="v3-switch-last"> 
+                        <div layout="row" class="v3-switch-item-new layout-row flex" flex=""> 
+                          <div flex="" title="Female" class="waves-effect waves-teal flex" role="button" tabindex="0">
+                              Female 
+                          </div> 
+                        </div> 
+                      </div>
+                      <div id="v3-switch-slider-59ueq" class="v3-switch-slider" style="width: 139.063px; left: 15px;">
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <label class="col-md-12 col-form-label">
+                    Smoking Status
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12 form-check">
+                    <style>
+                          .v3-switch-indicator-bar-default{
+                            width:50px;
+                            height:30px;
+                            -webkit-transform:translate3d(-150%,0,0);
+                            transition:.1s linear all;
+                            background:0 0;
+                            z-index:0
+                          }
+                          .v3-switch-indicator-bar{
+                            width:50px;
+                            -webkit-transform:translate3d(-188%,0,0)
+                          }
+                          .v3-switch-selected{
+                            width:50px;
+                            -webkit-transform:translate3d(-90%,0,0)
+                          }
+                          .v3-switch-selected-disabled{
+                            color:#bebebe!important
+                          }
+                          .v3-switch-option-item-left{
+                            height:28px;
+                            line-height:28px;
+                            z-index:1;
+                            margin:0 auto;
+                            text-align:center;
+                            border-top-left-radius:0;
+                            border-bottom-left-radius:0;
+                            -webkit-transform:translate3d(0,0,0)
+                          }
+                          .v3-switch-option-item-right{
+                            height:28px;
+                            line-height:28px;
+                            z-index:1;
+                            margin:0 auto;
+                            text-align:center;
+                            border-top-right-radius:0;
+                            border-bottom-right-radius:0;
+                            -webkit-transform:translate3d(0,0,0)
+                          }
+                          .v3-switch-indicator{
+                            cursor:pointer;
+                            margin-top:-7px;
+                            width:181px;
+                            color:#555!important;
+                            float:left;
+                            border-radius:2px;
+                            height:30px;
+                            font-size:13px
+                          }
+                          .v3-switch-item-selected{
+                            color:#fff;
+                            background-color:#fe0
+                          }
+                          .v3-switch-item{
+                            color:#555;
+                            background-color:#fff
+                          }
+                          .v3-switch-item-disabled{
+                            background-color:#fff
+                          }
+                          .v3-switch{
+                            margin-top:0;
+                            border-radius:2px;
+                            height:52px;
+                            font-size:16px;
+                            float:none
+                          }
+                          .v3-switch-new{
+                            color:#303131;
+                            background-color:#fff
+                          }
+                          .v3-switch-new-left{
+                            color:#303131;
+                            background-color:#fff;
+                            float:left
+                          }
+                          .v3-switch-item-new{
+                            cursor:pointer;
+                            color:#555;
+                            background-color:transparent;
+                            text-align:center;
+                            height:52px;
+                            line-height:52px;
+                            min-width:65px
+                          }
+                          .v3-switch-new-disabled{
+                            color:#bebebe
+                          }
+                          .v3-select-separator-new{
+                            width:1px;
+                            height:28px;
+                            background:#4caf50;
+                            position:relative
+                          }
+                          div.v3-switch-item-selected-new,div.v3-switch-item-selected-new:hover{
+                            background-color:#fe0;
+                            border:1px solid #fe0;
+                            color:#000!important;
+                            -webkit-transition:.6s ease-in-out;
+                            -moz-transition:.6s ease-in-out;
+                            transition:.6s ease-in-out
+                          }
+                          div.v3-switch-item-selected-disabled{
+                            background-color:#fe0;
+                            color:#000!important;
+                            -webkit-transition:.6s ease-in-out;
+                            -moz-transition:.6s ease-in-out;
+                            transition:.6s ease-in-out
+                          }
+                          .v3-switch-slider{
+                            height:42px;
+                            position:absolute;
+                            z-index:2
+                          }
+                          .v3-switch-last{
+                            color:#303131;
+                            background-color:#f0f0f0;
+                            border-color:#f0f0f0
+                          }
+                          .v3-switch-button-ontop{
+                            position:relative;
+                            z-index:10;
+                            display:block!important;
+                            opacity:1!important
+                          }
+                          .v3-switch-button-hide{
+                            opacity:0
+                          }
+                          .v3-switch-button-disable{
+                            background-color:#eee!important
+                          }
+                          .v3-switch-masked{
+                            top:0;
+                            left:0;
+                            right:0;
+                            bottom:0;
+                            position:fixed;
+                            z-index:1
+                          }
+                          .v3-switch-icon{
+                            top:2px;
+                            position:absolute;
+                            float:right;
+                            right:10px;
+                            color:#303131
+                          }
+                          .v3-switch-animation-right{
+                            -webkit-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                            -moz-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                            -o-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                            transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                            position:relative;
+                            right:-1000px;
+                            float:right;
+                            opacity:0;
+                            width:0
+                          }
+                          .v3-switch-animation-right-active{
+                            top:0;
+                            position:relative;
+                            right:0;opacity:1;
+                            z-index:500;
+                            width:100%
+                          }
+                          .v3-switch-container-right{
+                            float:right;
+                            overflow-x:hidden;
+                            top:0;
+                            position:absolute;
+                            right:0
+                          }
+                          .v3-switch-animation-left{
+                            -webkit-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                            -moz-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                            -o-transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                            transition:all .5s cubic-bezier(0,.93,.25,1.02);
+                            position:relative;
+                            left:-1000px;
+                            float:left;
+                            z-index:-1;
+                            width:0
+                          }
+                          .v3-switch-animation-left-active{
+                            position:relative;
+                            left:0;
+                            opacity:1;
+                            z-index:500;
+                            width:100%
+                          }
+                          .v3-switch-container-left{
+                            float:left;
+                            overflow-x:hidden;
+                            top:0;
+                            position:absolute
+                          }
+                          .v3-switch-item-sep-disabled,.v3-switch-last-disabled{
+                            color:#000;
+                            background-color:#ccc;
+                            cursor:default
+                          }
+                          .v3-switch-item-selected-disabled .v3-switch-item-new,.v3-switch-item-sep-disabled .v3-switch-item-new,.v3-switch-last-disabled .v3-switch-item-new{
+                            cursor:default!important
+                          }
+                          .v3-switch-last:hover,.v3-switch-slider-item-sep:hover{
+                            background-color:#f2e100
+                          }
+                          .v3-switch-item-sep{
+                            color:#555
+                          }
+                          .v3-switch-slider-item-sep{
+                            background-color:#f0f0f0;
+                            border-color:#f0f0f0;
+                            color:#303131
+                          }
+                    </style>
+                    <div layout="row" id="switch-41lvo" class="v3-switch v3-switch-new layout-row">
+                      <div ng-repeat="item in switchOptions" id="switch-41lvo-0" class="ng-scope v3-switch-slider-item-sep"> 
+                        <div layout="row" class="v3-switch-item-new layout-row flex" flex=""> 
+                          <div ng-click="chooseSwitch($index, item.key)" flex="" title="Yes" class="waves-effect waves-teal ng-binding flex" role="button" tabindex="0"> 
+                            Yes 
+                          </div> 
+                        </div> 
+                      </div>
+                      <div ng-repeat="item in switchOptions" id="switch-41lvo-1" class="ng-scope v3-switch-last v3-switch-item-selected-new"> 
+                        <div layout="row" class="v3-switch-item-new layout-row flex" flex=""> 
+                          <div ng-click="chooseSwitch($index, item.key)" flex="" title="No" class="waves-effect waves-teal ng-binding flex" role="button" tabindex="0"> 
+                            No 
+                          </div> 
+                        </div> 
+                      </div> 
+                      <div id="v3-switch-slider-41lvo" class="v3-switch-slider" style="width: 139.063px; left: 154px;">
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <input type="checkbox" class="checkbox1">
+                  <label class="checkbox-label" for="checkbox1">Proposer is the Life Assured</label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!--COVERAGE UI-view-->
+          <div class="card border-info">
+            <div class="card-header">Coverage</div>
+            <div class="card-body text-dark">
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <label class="col-sm-12 col-form-label">
+                    Effective Date
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <input clear-error-code="" type="text" id="coverageEffectiveDate" class="form-control datepicker" 
+                        bsDatepicker [bsValue]="bsValue"  includemaxdate="true" placeholder="DD/MM/YYYY" aria-invalid="false" disabled="disabled">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <label class="col-sm-12 col-form-label">
+                    Premium Frequency
+                    <span>*</span>
+                  </label>
+                  <div class="col-sm-12">
+                    <select id="coveragePremiumFrequency" class="form-control" aria-invalid="false">
+                      <option value="01" selected="selected">Yearly</option>
+                      <option value="02">Half Yearly</option>
+                      <option value="03">Quarterly</option>
+                      <option value="04">Monthly</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                      <label class="col-sm-12 col-form-label">
+                        Contract Currency
+                        <span>*</span>
+                      </label>
+                      <div class="col-xs-12 col-sm-12">
+                        <select (change)="selectCurrencyChangeHandler($event)" id="coverageContractCurrency" 
+                                class="form-control" aria-invalid="true">
+                          <option value="" disabled selected hidden>Please Choose...</option>
+                          <option value="USD">USD</option>
+                          <option value="SGD">SGD</option>
+                          <option value="HKD">HKD</option>
+                          <option value="IDR">IDR</option>
+                        </select>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <label class="col-sm-12 col-form-label">
+                      Billing Currency
+                    </label>
+                    <div class="col-sm-12">
+                      <input value="{{selectedCurrency}}" type="text" class="form-control" aria-invalid="false" disabled="disabled">
+                    </div>
+                  </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <label class="col-sm-12 col-form-label">
+                    Policy Term
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12">
+                    <input value="none" type="text" class="form-control" aria-invalid="false" disabled="disabled">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <label class="col-sm-12 col-form-label">
+                    Premium Term
+                    <span>*</span>
+                  </label>
+                  <div class="col-sm-12">
+                    <input value="none" type="text" class="form-control" aria-invalid="false" disabled="disabled">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
+                    Sum Assured
+                    <span>({{selectedCurrency}})</span> 
+                  </label>
+                  <div class="col-xs-12 col-sm-12">
+                    <input value="none" id="coverageSumAssured" type="text" class="form-control" aria-invalid="false" disabled="disabled">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
+                    Regular Premium
+                    <span>({{selectedCurrency}})</span>
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" id="coverageRegularPremium" class="form-control" aria-invalid="false">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!--FUND SELECTION UI-view-->
+          <div class="card border-info">
+            <div class="card-header">
+              Fund Selection
+              <button class="btn btn-lg roundbutton" id="fundAddButton">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+            <div class="card-body text-dark">
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
+                    Fund Name
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <select class="form-control" id="fundName0">
+                      <option value="" disabled hidden selected="selected">Please Choose...</option>
+                      <option value="LIQP" class="ng-binding ng-scope">Unit Linked Liquid Plus Fund</option>
+                      <option value="LDBT" class="ng-binding ng-scope">Unit Linked Debt Fund</option>
+                      <option value="LSEC" class="ng-binding ng-scope">Unit Linked Secured Fund</option>
+                      <option value="LPTY" class="ng-binding ng-scope">Unit Linked Property Fund</option>
+                      <option value="LBAL" class="ng-binding ng-scope">Unit Linked Balance Fund</option>
+                      <option value="LEQY" class="ng-binding ng-scope">Unit Linked Equity Fund</option>
+                      <option value="LGTH" class="ng-binding ng-scope">Unit Linked Growth Fund</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
+                    Fund Allocated (%)
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12 form-check form-check-inline">
+                      <input type="text" id="fundAllocated0" class="form-control ng-valid ng-empty ng-touched ng-dirty ng-valid-parse" aria-invalid="false" style="">
+                      <button class="btn btn-lg roundbutton" id="fundRemoveButton" disabled>
+                        <i class="fa fa-minus">
+
+                        </i>
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--SINGLE TOPUP UI-view-->
+          <div class="card border-info">
+            <div class="card-header">
+              Single Top Ups
+              <button class="btn btn-lg roundbutton" id="singleTopUpAddButton">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+            <div class="card-body text-dark">
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <label class="col-sm-12 col-form-label">
+                    Single Top Up Amount ({{selectedCurrency}})
+                    <span>*</span>
+                  </label>
+                  <div class="col-sm-12">
+                    <input type="text" id="" maxlength="15" max="99999999999999" class="form-control" aria-invalid="false">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <label class="col-sm-12 col-form-label">
+                    Year
+                    <span>*</span>
+                  </label>
+                  <div class="col-xs-12 col-sm-12 col-md-12 form-check form-check-inline">
+                    <input type="text" maxlength="2" class="form-control" aria-invalid="false">
+                    <button class="btn btn-lg roundbutton">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--RIDERS UI-view-->
+          <div class="card border-info">
+            <div class="card-header">
+              Riders
+              <button class="btn btn-lg roundbutton" id="riderAddButton">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+            <div class="card-body text-dark">
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <label class="col-sm-12 col-form-label">
+                    Rider Name
+                    <span>*</span>
+                  </label>
+                  <div class="form-check form-check-inline">
+                    <select class="form-control" id="" aria-invalid="false">
+                      <option value="" selected="selected"></option>
+                      <option value="TRMB">Term Assurance Benefit</option>
+                      <option value="AAIB">Accident Insurance Benefit</option>
+                      <option value="WOPU">Waiver of Premium Benefit</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-lg roundbutton fa fa-edit"></button>
+                  <div class="modal fade">
+
+                  </div>
+                  <button class="btn btn-lg roundbutton">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--GET QUOTE BUTTON-->
+          <div class="card border-secondary pt-3">
+            <div class="card-body text-secondary border-bottom-0">
+              <button class="btn next-btn btn-lg pull-right" id="getQuotationButton">
+                Get Quote
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+    <footer>
+      <div class="layer-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <p class="panel-footer">
+                <span>© 2019 DXC Technology</span>
+                <a href="#" title="Terms of Use">Terms of Use</a>
+                <a href="#" title="Privacy Policy">Privacy Policy</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+
