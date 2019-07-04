@@ -1,0 +1,115 @@
+{
+  "common": {
+    "productIngeneral": {
+      "rul": "Regular Unit Link"
+    },
+    "premiumFrequency": {
+      "01": "Yearly",
+      "02": "Half Yearly",
+      "04": "Quartlerly",
+      "12": "Monthly"
+    },
+    "fund": {
+      "LBAL": "Unit Linked Balance Fund",
+      "LEQY": "Unit Linked Equity Fund",
+      "LGTH": "Unit Linked Growth Fund",
+      "LSEC": "Unit Linked Secured Fund",
+      "LPTY": "Unit Linked Property Fund",
+      "LDBT": "Unit Linked Debt Fund",
+      "LIQP": "Unit Linked Liquid Plus Fund"
+    }
+  },
+
+  "quotation": {
+    "basicInformation": {
+        "proposer": "Proposer",
+        "lifeInsured": "Life Insured",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "dateOfBirth": "Date of Birth",
+        "ageNearest": "Age Nearest Birthday",
+        "gender": "Gender",
+        "smokingStatus": "Smoking Status",
+        "mobileNo": "Mobile No",
+        "asLifeAssured": "Proposer is the Life Assured"
+    },
+    "coverage": {
+        "name": "Coverage",
+        "effectiveDate": "Effective Date",
+        "premiumFrequency": "Premium Frequency",
+        "contractCurrency": "Contract Currency",
+        "billingCurrency": "Billing Currency",
+        "policyTerm": "Policy Term",
+        "premiumTerm": "Premium Term",
+        "sumAssured": "Sum Assured",
+        "regularPremium": "Regular Premium",
+        "relationship": "Relationship to Policy Owner"
+    },
+    "fund": {
+        "selection": "Fund Selection",
+        "name": "Fund Name",
+        "allocated": "Fund Allocated"
+    },
+    "singletopup": {
+        "name": "Single Top Ups",
+        "amount": "Single Top Up Amount",
+        "year": "Year"
+    },
+    "premiumSummary": {
+        "name": "Premium Summary",
+        "basicPremium": "Basic Premium",
+        "tax": "Tax",
+        "contractFee": "Contract Fee",
+        "totalPremiumPayable": "Total Premium Payable"
+    },
+    "button": {
+        "getQuote": "Get Quote",
+        "accept": "Accept & Continue"
+    },
+    "error": {
+        "lifeInsured": "Life Assured is the same with Proposer",
+        "failedValidation":
+            "Quotation is not calculated successfully. Please check input and try again!"
+    },
+    "details": {
+        "quotationDetails": "View Quotation Details",
+        "form": "Quotation Form",
+        "close": "Close"
+    },
+    "rider": {
+        "title": "Riders",
+        "name": "Rider Name",
+        "TRMB": "Term Assurance Benefit",
+        "AAIB": "Accident Insurance Benefit",
+        "WOPU": "Waiver of Premium Benefit",
+        "agree": "OK",
+        "term": "Rider Term",
+        "summAssured": "Sum Assured",
+        "benefitAmount": "Benefit Amount"
+    }
+  },
+
+  "home": {
+    "lineOfBusiness": "Select a Line Of Business",
+    "welcome": "Welcome to IPOS Direct Sales",
+    "getAQuote": "Get a Quote",
+    "selectProduct": "Select a product to start a quote",
+    "navbar": {
+        "en": "English",
+        "vie": "Vietnamese"
+    },
+    "error": {
+        "model":
+            "Have a problem with connection. Please contact Administrator for more information",
+        "underConstruction":
+            "The product is under construction. Please contact Administrator for more information.",
+        "caseProceeded":
+            "The Business case {{businessCase}} has been proceeded. You cannot access this Business case now. Please contact Administrator"
+    },
+    "footer": {
+        "company": "2019 DXC Technology",
+        "term": "Terms of Use",
+        "privacyPolicy": "Privacy Policy"
+    }
+  }
+}

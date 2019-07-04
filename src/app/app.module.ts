@@ -14,11 +14,23 @@ import { MatDatepickerModule,
          MatFormFieldModule,
          MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChatbotRasaModule } from 'angular-chat-widget-rasa';
+
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { FundSelectionComponent } from './fund-selection/fund-selection.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SingleTopUpComponent } from './single-top-up/single-top-up.component';
+
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FundSelectionComponent,
+    SingleTopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +44,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ChatbotRasaModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -41,7 +63,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ChatbotRasaModule
   ]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

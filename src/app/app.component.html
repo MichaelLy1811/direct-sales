@@ -6,12 +6,12 @@
             <p class="panel-logo">
               <a href="#" title="DXC Company"></a>
             </p>
-            <p class="panel-product-title">Regular Unit Link</p>
+            <p class="panel-product-title">{{'common.productIngeneral.rul' | translate}}</p>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
             <select class="form-control select-language" aria-invalid="false">
-              <option value="en" selected="selected">English</option>
-              <option value="vi">Vietnamese</option>
+              <option value="en" selected="selected" (click)="switchLanguage('en')">{{'home.navbar.en' | translate}}</option>
+              <option value="vi" (click)="switchLanguage('vie')">{{'home.navbar.vie' | translate}}</option>
             </select>
           </div>
         </nav>
@@ -47,18 +47,18 @@
   </header>
 
   <main>
-    
+
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
           <!--PROPOSER UI-view-->
           <div class="card border-info">
-            <div class="card-header">Proposer</div>
+            <div class="card-header">{{'quotation.basicInformation.proposer' | translate}}</div>
             <div class="card-body text-dark">
 
               <div class="form-group row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <label class="col-md-12 col-form-label">
-                    First Name
+                    {{"quotation.basicInformation.firstName"|translate}}
                     <span>*</span>
                   </label>
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <label class="col-md-12 col-form-label">
-                    Last Name
+                    {{"quotation.basicInformation.lastName"|translate}}
                     <span>*</span>
                   </label>
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -79,18 +79,18 @@
               <div class="form-group row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <label class="col-md-12 col-form-label">
-                      Date of Birth
+                    {{"quotation.basicInformation.dateOfBirth"|translate}}
                     <span>*</span>
                   </label>
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <input name="poDateOfBirth" bsDatepicker [bsConfig]="{ containerClass: 'theme-default' }" class="form-control datepicker" type="text" autocomplete="off" placeholder="MM/DD/YYYY">
                     <i id="P1728750205" class="far fa-calendar-alt fa-2x" aria-hidden="true" aria-haspopup="true"
-                        aria-expanded="true" aria-readonly="false"></i>                 
+                        aria-expanded="true" aria-readonly="false"></i>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <label class="col-md-12 col-form-label">
-                    Age Nearest Birthday
+                    {{"quotation.basicInformation.ageNearest"|translate}}
                   </label>
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <input type="text" id="poAge" class="form-control" aria-invalid="false" disabled="disabled">
@@ -101,7 +101,7 @@
               <div class="form-group row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <label class="col-sm-12 col-form-label">
-                    Gender
+                    {{"quotation.basicInformation.gender"|translate}}
                     <span>*</span>
                   </label>
                   <div class="col-xs-12 col-sm-12 col-md-12 form-check">
@@ -109,18 +109,15 @@
                       .v3-switch-indicator-bar-default{
                         width:50px;
                         height:30px;
-                        -webkit-transform:translate3d(-150%,0,0);
                         transition:.1s linear all;
                         background:0 0;
                         z-index:0
                       }
                       .v3-switch-indicator-bar{
                         width:50px;
-                        -webkit-transform:translate3d(-188%,0,0)
                       }
                       .v3-switch-selected{
                         width:50px;
-                        -webkit-transform:translate3d(-90%,0,0)
                       }
                       .v3-switch-selected-disabled{
                         color:#bebebe!important
@@ -133,7 +130,6 @@
                         text-align:center;
                         border-top-left-radius:0;
                         border-bottom-left-radius:0;
-                        -webkit-transform:translate3d(0,0,0)
                       }
                       .v3-switch-option-item-right{
                         height:28px;
@@ -143,7 +139,6 @@
                         text-align:center;
                         border-top-right-radius:0;
                         border-bottom-right-radius:0;
-                        -webkit-transform:translate3d(0,0,0)
                       }
                       .v3-switch-indicator{
                         cursor:pointer;
@@ -320,30 +315,30 @@
                         border-color:#f0f0f0;
                         color:#303131
                       }
-                    </style>                   
+                    </style>
                     <div layout="row" id="switch-59ueq" class="v3-switch v3-switch-new layout-row">
                       <div id="switch-59ueq-0" class="v3-switch-slider-item-sep v3-switch-item-selected-new">
-                        <div layout="row" class="v3-switch-item-new layout-row flex" flex=""> 
-                          <div flex="" title="Male" class="waves-effect waves-teal ng-binding flex" role="button" tabindex="0"> 
-                            Male 
-                          </div> 
-                        </div> 
+                        <div layout="row" class="v3-switch-item-new layout-row flex" flex="">
+                          <div flex="" title="Male" class="waves-effect waves-teal ng-binding flex" role="button" tabindex="0">
+                            Male
+                          </div>
+                        </div>
                       </div>
-                      <div id="switch-59ueq-1" class="v3-switch-last"> 
-                        <div layout="row" class="v3-switch-item-new layout-row flex" flex=""> 
+                      <div id="switch-59ueq-1" class="v3-switch-last">
+                        <div layout="row" class="v3-switch-item-new layout-row flex" flex="">
                           <div flex="" title="Female" class="waves-effect waves-teal flex" role="button" tabindex="0">
-                              Female 
-                          </div> 
-                        </div> 
+                              Female
+                          </div>
+                        </div>
                       </div>
                       <div id="v3-switch-slider-59ueq" class="v3-switch-slider" style="width: 139.063px; left: 15px;">
-                      </div> 
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <label class="col-md-12 col-form-label">
-                    Smoking Status
+                    {{"quotation.basicInformation.smokingStatus"|translate}}
                     <span>*</span>
                   </label>
                   <div class="col-xs-12 col-sm-12 col-md-12 form-check">
@@ -564,22 +559,22 @@
                           }
                     </style>
                     <div layout="row" id="switch-41lvo" class="v3-switch v3-switch-new layout-row">
-                      <div ng-repeat="item in switchOptions" id="switch-41lvo-0" class="ng-scope v3-switch-slider-item-sep"> 
-                        <div layout="row" class="v3-switch-item-new layout-row flex" flex=""> 
-                          <div ng-click="chooseSwitch($index, item.key)" flex="" title="Yes" class="waves-effect waves-teal ng-binding flex" role="button" tabindex="0"> 
-                            Yes 
-                          </div> 
-                        </div> 
+                      <div ng-repeat="item in switchOptions" id="switch-41lvo-0" class="ng-scope v3-switch-slider-item-sep">
+                        <div layout="row" class="v3-switch-item-new layout-row flex" flex="">
+                          <div ng-click="chooseSwitch($index, item.key)" flex="" title="Yes" class="waves-effect waves-teal ng-binding flex" role="button" tabindex="0">
+                            Yes
+                          </div>
+                        </div>
                       </div>
-                      <div ng-repeat="item in switchOptions" id="switch-41lvo-1" class="ng-scope v3-switch-last v3-switch-item-selected-new"> 
-                        <div layout="row" class="v3-switch-item-new layout-row flex" flex=""> 
-                          <div ng-click="chooseSwitch($index, item.key)" flex="" title="No" class="waves-effect waves-teal ng-binding flex" role="button" tabindex="0"> 
-                            No 
-                          </div> 
-                        </div> 
-                      </div> 
+                      <div ng-repeat="item in switchOptions" id="switch-41lvo-1" class="ng-scope v3-switch-last v3-switch-item-selected-new">
+                        <div layout="row" class="v3-switch-item-new layout-row flex" flex="">
+                          <div ng-click="chooseSwitch($index, item.key)" flex="" title="No" class="waves-effect waves-teal ng-binding flex" role="button" tabindex="0">
+                            No
+                          </div>
+                        </div>
+                      </div>
                       <div id="v3-switch-slider-41lvo" class="v3-switch-slider" style="width: 139.063px; left: 154px;">
-                      </div> 
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -587,8 +582,8 @@
 
               <div class="form-group row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                  <input type="checkbox" class="checkbox1">
-                  <label class="checkbox-label" for="checkbox1">Proposer is the Life Assured</label>
+                  <input type="checkbox" class="ipos-checkbox">
+                  <label class="checkbox-label" for="ipos-checkbox">{{"quotation.basicInformation.asLifeAssured"|translate}}</label>
                 </div>
               </div>
 
@@ -597,30 +592,30 @@
 
           <!--COVERAGE UI-view-->
           <div class="card border-info">
-            <div class="card-header">Coverage</div>
+            <div class="card-header">{{ "quotation.coverage.name" | translate }}</div>
             <div class="card-body text-dark">
               <div class="form-group row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                   <label class="col-sm-12 col-form-label">
-                    Effective Date
+                    {{ "quotation.coverage.effectiveDate" | translate }}
                     <span>*</span>
                   </label>
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                      <input clear-error-code="" type="text" id="coverageEffectiveDate" class="form-control datepicker" 
+                      <input clear-error-code="" type="text" id="coverageEffectiveDate" class="form-control datepicker"
                         bsDatepicker [bsValue]="bsValue"  includemaxdate="true" placeholder="DD/MM/YYYY" aria-invalid="false" disabled="disabled">
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                   <label class="col-sm-12 col-form-label">
-                    Premium Frequency
+                    {{ "quotation.coverage.premiumFrequency" | translate }}
                     <span>*</span>
                   </label>
                   <div class="col-sm-12">
                     <select id="coveragePremiumFrequency" class="form-control" aria-invalid="false">
-                      <option value="01" selected="selected">Yearly</option>
-                      <option value="02">Half Yearly</option>
-                      <option value="03">Quarterly</option>
-                      <option value="04">Monthly</option>
+                      <option value="01" selected="selected">{{"common.premiumFrequency.01" | translate}}</option>
+                      <option value="02">{{"common.premiumFrequency.02" | translate}}</option>
+                      <option value="04">{{"common.premiumFrequency.04" | translate}}</option>
+                      <option value="12">{{"common.premiumFrequency.12" | translate}}</option>
                     </select>
                   </div>
                 </div>
@@ -629,11 +624,11 @@
               <div class="form-group row">
                   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                       <label class="col-sm-12 col-form-label">
-                        Contract Currency
+                        {{ "quotation.coverage.contractCurrency" | translate }}
                         <span>*</span>
                       </label>
                       <div class="col-xs-12 col-sm-12">
-                        <select (change)="selectCurrencyChangeHandler($event)" id="coverageContractCurrency" 
+                        <select (change)="selectCurrencyChangeHandler($event)" id="coverageContractCurrency"
                                 class="form-control" aria-invalid="true">
                           <option value="" disabled selected hidden>Please Choose...</option>
                           <option value="USD">USD</option>
@@ -645,10 +640,10 @@
                   </div>
                   <div class="col-xs-12 col-sm-6">
                     <label class="col-sm-12 col-form-label">
-                      Billing Currency
+                      {{ "quotation.coverage.billingCurrency" | translate }}
                     </label>
                     <div class="col-sm-12">
-                      <input value="{{selectedCurrency}}" type="text" class="form-control" aria-invalid="false" disabled="disabled">
+                      <input value="{{SelectedCurrency}}" type="text" class="form-control" aria-invalid="false" disabled="disabled">
                     </div>
                   </div>
               </div>
@@ -656,7 +651,7 @@
               <div class="form-group row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                   <label class="col-sm-12 col-form-label">
-                    Policy Term
+                    {{ "quotation.coverage.policyTerm" | translate }}
                     <span>*</span>
                   </label>
                   <div class="col-xs-12 col-sm-12">
@@ -665,7 +660,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6">
                   <label class="col-sm-12 col-form-label">
-                    Premium Term
+                    {{ "quotation.coverage.premiumTerm" | translate }}
                     <span>*</span>
                   </label>
                   <div class="col-sm-12">
@@ -677,8 +672,8 @@
               <div class="form-group row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                   <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
-                    Sum Assured
-                    <span>({{selectedCurrency}})</span> 
+                    {{ "quotation.coverage.sumAssured" | translate }}
+                    <span>({{SelectedCurrency}})</span>
                   </label>
                   <div class="col-xs-12 col-sm-12">
                     <input value="none" id="coverageSumAssured" type="text" class="form-control" aria-invalid="false" disabled="disabled">
@@ -686,8 +681,8 @@
                 </div>
                 <div class="col-xs-12 col-sm-6">
                   <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
-                    Regular Premium
-                    <span>({{selectedCurrency}})</span>
+                    {{ "quotation.coverage.regularPremium" | translate }}
+                    <span>({{SelectedCurrency}})</span>
                     <span>*</span>
                   </label>
                   <div class="col-xs-12 col-sm-12 col-md-12">
@@ -695,95 +690,21 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
 
           <!--FUND SELECTION UI-view-->
           <div class="card border-info">
-            <div class="card-header">
-              Fund Selection
-              <button class="btn btn-lg roundbutton" id="fundAddButton">
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
-            <div class="card-body text-dark">
-              <div class="form-group row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
-                    Fund Name
-                    <span>*</span>
-                  </label>
-                  <div class="col-xs-12 col-sm-12 col-md-12">
-                    <select class="form-control" id="fundName0">
-                      <option value="" disabled hidden selected="selected">Please Choose...</option>
-                      <option value="LIQP" class="ng-binding ng-scope">Unit Linked Liquid Plus Fund</option>
-                      <option value="LDBT" class="ng-binding ng-scope">Unit Linked Debt Fund</option>
-                      <option value="LSEC" class="ng-binding ng-scope">Unit Linked Secured Fund</option>
-                      <option value="LPTY" class="ng-binding ng-scope">Unit Linked Property Fund</option>
-                      <option value="LBAL" class="ng-binding ng-scope">Unit Linked Balance Fund</option>
-                      <option value="LEQY" class="ng-binding ng-scope">Unit Linked Equity Fund</option>
-                      <option value="LGTH" class="ng-binding ng-scope">Unit Linked Growth Fund</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
-                    Fund Allocated (%)
-                    <span>*</span>
-                  </label>
-                  <div class="col-xs-12 col-sm-12 col-md-12 form-check form-check-inline">
-                      <input type="text" id="fundAllocated0" class="form-control ng-valid ng-empty ng-touched ng-dirty ng-valid-parse" aria-invalid="false" style="">
-                      <button class="btn btn-lg roundbutton" id="fundRemoveButton" disabled>
-                        <i class="fa fa-minus">
-
-                        </i>
-                      </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <app-fund-selection></app-fund-selection>
           </div>
 
           <!--SINGLE TOPUP UI-view-->
-          <div class="card border-info">
-            <div class="card-header">
-              Single Top Ups
-              <button class="btn btn-lg roundbutton" id="singleTopUpAddButton">
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
-            <div class="card-body text-dark">
-              <div class="form-group row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                  <label class="col-sm-12 col-form-label">
-                    Single Top Up Amount ({{selectedCurrency}})
-                    <span>*</span>
-                  </label>
-                  <div class="col-sm-12">
-                    <input type="text" id="" maxlength="15" max="99999999999999" class="form-control" aria-invalid="false">
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                  <label class="col-sm-12 col-form-label">
-                    Year
-                    <span>*</span>
-                  </label>
-                  <div class="col-xs-12 col-sm-12 col-md-12 form-check form-check-inline">
-                    <input type="text" maxlength="2" class="form-control" aria-invalid="false">
-                    <button class="btn btn-lg roundbutton">
-                      <i class="fa fa-minus"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <app-single-top-up></app-single-top-up>
 
           <!--RIDERS UI-view-->
           <div class="card border-info">
             <div class="card-header">
-              Riders
+              {{ "quotation.rider.title" | translate }}
               <button class="btn btn-lg roundbutton" id="riderAddButton">
                 <i class="fa fa-plus"></i>
               </button>
@@ -792,15 +713,15 @@
               <div class="form-group row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <label class="col-sm-12 col-form-label">
-                    Rider Name
+                    {{"quotation.rider.name" | translate }}
                     <span>*</span>
                   </label>
                   <div class="form-check form-check-inline">
                     <select class="form-control" id="" aria-invalid="false">
                       <option value="" selected="selected"></option>
-                      <option value="TRMB">Term Assurance Benefit</option>
-                      <option value="AAIB">Accident Insurance Benefit</option>
-                      <option value="WOPU">Waiver of Premium Benefit</option>
+                      <option value="TRMB">{{"quotation.rider.TRMB" | translate }}</option>
+                      <option value="AAIB">{{"quotation.rider.AAIB" | translate }}</option>
+                      <option value="WOPU">{{"quotation.rider.WOPU" | translate }}</option>
                     </select>
                   </div>
                   <button class="btn btn-lg roundbutton fa fa-edit"></button>
@@ -815,18 +736,20 @@
             </div>
           </div>
 
+
+
           <!--GET QUOTE BUTTON-->
           <div class="card border-secondary pt-3">
             <div class="card-body text-secondary border-bottom-0">
               <button class="btn next-btn btn-lg pull-right" id="getQuotationButton">
-                Get Quote
+                {{ "quotation.button.getQuote" | translate }}
               </button>
             </div>
           </div>
 
         </div>
-      </div>
-    
+</div>
+
     <footer>
       <div class="layer-footer">
         <div class="container-fluid">
@@ -840,6 +763,10 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="chat-bot">
+        <chat-widget botName="Assistant" theme="grey" ></chat-widget>
       </div>
     </footer>
   </main>

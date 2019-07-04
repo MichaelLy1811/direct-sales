@@ -1,0 +1,50 @@
+
+<form [formGroup]="fundSelectionForm">
+  <div class="card-header">
+      {{ "quotation.fund.selection" | translate }}
+      <button class="btn btn-lg roundbutton" id="fundAddButton" (click)="addFund()" [disabled]="fundSelection.controls.length >= 7">
+        <i class="fa fa-plus"></i>
+      </button>
+  </div>
+
+    <div class="card-body text-dark">
+      <div *ngFor="let item of fundSelection.controls; let fundIndex = index" [formGroupName]="fundIndex">
+      <div class="form-group row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
+            {{"quotation.fund.name" | translate }}
+            <span>*</span>
+          </label>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <select class="form-control" id="fundName0">
+              <option value="" disabled hidden selected="selected">Please Choose...</option>
+              <option value="LIQP" class="ng-binding ng-scope">{{"common.fund.LIQP" | translate}}</option>
+              <option value="LDBT" class="ng-binding ng-scope">{{"common.fund.LDBT" | translate}}</option>
+              <option value="LSEC" class="ng-binding ng-scope">{{"common.fund.LSEC" | translate}}</option>
+              <option value="LPTY" class="ng-binding ng-scope">{{"common.fund.LPTY" | translate}}</option>
+              <option value="LBAL" class="ng-binding ng-scope">{{"common.fund.LBAL" | translate}}</option>
+              <option value="LEQY" class="ng-binding ng-scope">{{"common.fund.LEQY" | translate}}</option>
+              <option value="LGTH" class="ng-binding ng-scope">{{"common.fund.LGTH" | translate}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <label class="col-xs-12 col-sm-12 col-md-12 col-form-label">
+            {{ "quotation.fund.allocated" | translate }} (%)
+            <span>*</span>
+          </label>
+          <div class="col-xs-12 col-sm-12 col-md-12 form-check form-check-inline">
+              <input type="text" id="fundAllocated0" class="form-control ng-valid ng-empty ng-touched ng-dirty ng-valid-parse" aria-invalid="false">
+              <button class="btn btn-lg roundbutton" id="fundRemoveButton" (click)="removeFund(fundIndex)" [disabled]="fundSelection.controls.length <= 1">
+                <i class="fa fa-minus">
+
+                </i>
+              </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+</form>

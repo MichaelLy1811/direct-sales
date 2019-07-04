@@ -1,0 +1,38 @@
+<form [formGroup]="singleTopUpForm">
+    <div class="card border-info">
+        <div class="card-header">
+          {{ "quotation.singletopup.name" | translate }}
+          <button class="btn btn-lg roundbutton" id="singleTopUpAddButton" (click)="addTopUp()" [disabled]="singleTopUp.controls.length > 15">
+            <i class="fa fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body text-dark">
+          <div *ngFor="let item of singleTopUp.controls; let topUpIndex = index" [formGroupName]="topUpIndex">
+            <div class="form-group row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label class="col-sm-12 col-form-label">
+                  {{"quotation.singletopup.amount" | translate }} ({{SelectedCurrency}})
+                  <span>*</span>
+                </label>
+                <div class="col-sm-12">
+                  <input type="text" id="" maxlength="15" max="99999999999999" class="form-control" aria-invalid="false">
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label class="col-sm-12 col-form-label">
+                  {{ "quotation.singletopup.year" | translate }}
+                  <span>*</span>
+                </label>
+                <div class="col-xs-12 col-sm-12 col-md-12 form-check form-check-inline">
+                  <input type="text" maxlength="2" class="form-control" aria-invalid="false">
+                  <button class="btn btn-lg roundbutton" (click)="removeTopUp(topUpIndex)">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <p>{{SelectedCurrency}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</form>

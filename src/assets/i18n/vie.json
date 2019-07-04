@@ -1,0 +1,106 @@
+﻿{
+  "common": {
+    "productIngeneral": {
+      "rul": "Đơn vị cơ bản"
+    },
+    "premiumFrequency": {
+      "01": "Hàng năm",
+      "02": "Mỗi nửa năm",
+      "04": "Mỗi quý",
+      "12": "Hàng tháng"
+    }
+  },
+
+  "quotation": {
+    "basicInformation": {
+        "proposer": "Người đề xuất",
+        "lifeInsured": "Bảo Hiểm Nhân Thọ",
+        "firstName": "Tên",
+        "lastName": "Họ, đệm",
+        "dateOfBirth": "Ngày Sinh",
+        "ageNearest": "Tuổi sinh nhật gần nhất",
+        "gender": "Giới tính",
+        "smokingStatus": "Tình trạng hút thuốc",
+        "mobileNo": "Số điện thoại",
+        "asLifeAssured": "Người đề xuất là người được bảo hiểm"
+    },
+    "coverage": {
+        "name": "Bảo Hiểm",
+        "effectiveDate": "Ngày bắt đầu có hiệu lực",
+        "premiumFrequency": "Tần suất thanh toán",
+        "contractCurrency": "Đơn vị tiền Hợp đồng",
+        "billingCurrency": "Đơn vị tiền Hóa đơn",
+        "policyTerm": "Điều khoản",
+        "premiumTerm": "Premium Term",
+        "sumAssured": "Sum Assured",
+        "regularPremium": "Regular Premium",
+        "relationship": "Relationship to Policy Owner"
+    },
+    "fund": {
+        "selection": "Chọn Quỹ",
+        "name": "Tên Quỹ",
+        "allocated": "Quỹ Phân Bổ"
+    },
+    "singletopup": {
+        "name": "Single Top Ups",
+        "amount": "Single Top Up Amount",
+        "year": "Year"
+    },
+    "premiumSummary": {
+        "name": "Premium Summary",
+        "basicPremium": "Basic Premium",
+        "tax": "Tax",
+        "contractFee": "Contract Fee",
+        "totalPremiumPayable": "Total Premium Payable"
+    },
+    "button": {
+        "getQuote": "Get Quote",
+        "accept": "Accept & Continue"
+    },
+    "error": {
+        "lifeInsured": "Life Assured is the same with Proposer",
+        "failedValidation":
+            "Quotation is not calculated successfully. Please check input and try again!"
+    },
+    "details": {
+        "quotationDetails": "View Quotation Details",
+        "form": "Quotation Form",
+        "close": "Close"
+    },
+    "rider": {
+        "title": "Riders",
+        "name": "Rider Name",
+        "TRMB": "Term Assurance Benefit",
+        "AAIB": "Accident Insurance Benefit",
+        "WOPU": "Waiver of Premium Benefit",
+        "agree": "OK",
+        "term": "Rider Term",
+        "summAssured": "Sum Assured",
+        "benefitAmount": "Benefit Amount"
+    }
+  },
+
+  "home": {
+    "lineOfBusiness": "Select a Line Of Business",
+    "welcome": "Welcome to IPOS Direct Sales",
+    "getAQuote": "Get a Quote",
+    "selectProduct": "Select a product to start a quote",
+    "navbar": {
+        "en": "Tiếng Anh",
+        "vie": "Tiếng Việt"
+    },
+    "error": {
+        "model":
+            "Have a problem with connection. Please contact Administrator for more information",
+        "underConstruction":
+            "The product is under construction. Please contact Administrator for more information.",
+        "caseProceeded":
+            "The Business case {{businessCase}} has been proceeded. You cannot access this Business case now. Please contact Administrator"
+    },
+    "footer": {
+        "company": "2019 DXC Technology",
+        "term": "Terms of Use",
+        "privacyPolicy": "Privacy Policy"
+    }
+  }
+}

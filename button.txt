@@ -1,0 +1,67 @@
+1:
+code: helptoday
+3 button:
+-Why should I choose your company?
+-Which type of Life Insurance is right for me?
+-Want to get Life Insurance quote
+
+2:
+code: otherinfo:
+2 button
+- Yes, please!
+- No, I am done
+
+3:
+code: policies
+2 button:
+- Term Life insurnce
+- Universal Life insrance
+
+4:
+code: bestway
+2 button:
+- Phone
+- Email
+
+5:
+code: kindofInsurance
+2 button:
+- Term Life insurance
+- Regular Unit link insurance
+
+6:
+code: calendar:
+display calendar
+
+7:
+code: smoke
+button:
+- Yes:
+- No
+
+8:
+code: gender
+button:
+- Male
+- Female
+
+9: 
+code: frequency
+4 button:
+- Yearly
+- Half Yearly
+- Quarterly
+- Monthly
+
+10:
+code: addrider
+2 button:
+- Yes
+- No
+
+11:
+code: selectionrider
+3 button:
+- Term Assurance benefit
+- Accident Insurance Benefit
+- Waiver of Premium Benefit
